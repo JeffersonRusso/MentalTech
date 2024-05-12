@@ -30,6 +30,7 @@ public class UserController {
     private final AuthenticationManager authenticationManager;
     private final JwtUtil jwtUtil;
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/login")
     public ResponseEntity<UserResponse> login(@RequestParam("email") String email,
                                               @RequestParam String password) {
@@ -53,6 +54,7 @@ public class UserController {
         }
     }
 
+    @CrossOrigin(origins = "*")
     @PostMapping("/signUp")
     public UserResponse createUser(@RequestBody UserRequest userRequest) {
         try {
