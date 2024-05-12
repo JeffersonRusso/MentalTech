@@ -10,3 +10,24 @@ public class MentaltechApplication {
 		SpringApplication.run(MentaltechApplication.class, args);
 	}
 }
+
+
+/**
+ *
+ * Doc de requisitos
+ * API Backend
+ * - Endpoints
+ *   - /user/login
+ *     Endpoint utilizado para realizr o login do usuario
+ *     Response Dados Para realizr o login
+ *     - Email
+ *     - User
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
