@@ -39,6 +39,7 @@ public class MessageController {
     private final AuthenticationManager authenticationManager;
     private final JwtUtil jwtUtil;
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/getAll")
     public List<MessageResponse> getAllMessages(@RequestParam(defaultValue = "0") Integer pageNumber,
                                                 @RequestParam(defaultValue = "10") Integer pageSize
@@ -47,6 +48,7 @@ public class MessageController {
         return entrypointMessageMapper.toResponse(allMessages);
     }
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/getAllByUserId")
     public List<MessageResponse> getAllMessagesByUserId(@RequestParam(defaultValue = "0") Integer pageNumber,
                                                         @RequestParam(defaultValue = "10") Integer pageSize,
@@ -59,6 +61,7 @@ public class MessageController {
         return entrypointMessageMapper.toResponse(allMessages);
     }
 
+    @CrossOrigin(origins = "*")
     @PostMapping("/postMessage")
     public ResponseEntity postMessage(@RequestBody MessageRequest message,
                                       @RequestHeader("Authorization") String headerValue) {
@@ -76,6 +79,7 @@ public class MessageController {
         }
     }
 
+    @CrossOrigin(origins = "*")
     @DeleteMapping("/deleteMessage")
     public void deleteMessage(@RequestParam Long idMessage,
                               @RequestHeader("Authorization") String headerValue) {
@@ -92,6 +96,7 @@ public class MessageController {
         }
     }
 
+    @CrossOrigin(origins = "*")
     @PutMapping("/putMessage")
     public void putMessage(@RequestBody MessageRequest message,
                            @RequestHeader("Authorization") String headerValue) {
